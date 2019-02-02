@@ -1,0 +1,17 @@
+#Create an m x n matrix with replicate(m, rnorm(n)) with m=10
+#column vectors of n=10 elements each, constructed with rnorm(n),
+#which creates random normal numbers.
+
+#ASSIGNMENT 3.2
+mxn <- matrix(nrow = 10, rnorm(100), ncol = 10)
+mxn
+View(mxn)
+
+mxn <- rep (mxn, 10)
+mxn
+View(mxn)
+
+#Then we transform it into a dataframe (thus 10 observations of 10 variables)
+mxndf <- as.data.frame(mxn)
+View(mxndf)
+dim(mxndf)
