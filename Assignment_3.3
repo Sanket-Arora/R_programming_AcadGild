@@ -1,0 +1,11 @@
+#Define matrix mymat by replicating the sequence 1:5 for 4 times and 
+#transforming into a matrix, sum over rows and columns.
+
+mymat <- matrix(seq(1:5), nrow = 4, ncol = 5, byrow = T)
+class(mymat)
+
+mymatrep <- rep(mymat,4) 
+class(mymatrep)
+mymatrep <- as.matrix(mymatrep)
+
+mymatrep <- matrix (1:length(mymatrep), nrow = 10, ncol = 10)
