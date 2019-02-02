@@ -1,0 +1,13 @@
+#ASSIGNMENT 3.1
+#The purpose is to create a lower triangular matrix, that is a matrix whose
+elements below the main diagonal are non-zero, the others are left
+untouched to their initialized zero value.
+
+mXn <- matrix(1:25, nrow=5, ncol=5)
+#Convert all elements to 0
+apply(mXn, c(1, 2), function(x) 0)
+#Create lower triangular matrix whose elements below the main diagonal are non-zero and 
+#the others are left untouched to their initialized zero value.
+mXn [upper.tri(mXn)] <- 0 
+#Also converting main diagonal elements to 0
+mXn [upper.tri(mXn ,diag=TRUE)] <- 0
